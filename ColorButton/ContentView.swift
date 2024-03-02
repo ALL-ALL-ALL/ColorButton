@@ -8,95 +8,78 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var background = Color(.white)
+    
     var body: some View {
+        
         ZStack{
+            background.edgesIgnoringSafeArea(.all)
+
             HStack {
-                
-            
+         
                 Button {
-                    
+                    background = .red
                 } label: {
                     ZStack{
                         Rectangle()
-                            .frame(width: 70, height: 50)
+                            .frame(width: 90, height: 70)
                             .foregroundColor(.red)
-                        
-                        Image(systemName: "tortoise")
+                            .cornerRadius(10)
+                        Image(systemName: "tortoise.fill")
                             .imageScale(.large)
-                            .foregroundStyle(.blue)
-                        
-                        
-                        
-                        
-     
-                        
-                        
+                            .foregroundStyle(.white)
+                    } // FIN ZSTACK
+                } // FIN LABEL
+ 
+                Button {
+                    background = .blue
+                } label: {
+                    ZStack{
+                        Rectangle()
+                            .frame(width: 90, height: 70)
+                            .foregroundColor(.blue)
+                            .cornerRadius(10)
+                        Image(systemName: "music.note")
+                            .imageScale(.large)
+                            .foregroundStyle(.white)
+   
                     } // FIN ZSTACK
                     
                 } // FIN LABEL
                 
-                
-                
-                
-                
-                
-                
-                
-                
-
-                
-                
                 Button {
-                    
+                    background = .red
                 } label: {
-                    Image(systemName: "music.note")
-                        .imageScale(.large)
-                        .foregroundColor(.blue)
+                    ZStack{
+                        Rectangle()
+                            .frame(width: 90, height: 70)
+                            .foregroundColor(.red)
+                            .cornerRadius(10)
+                        Image(systemName: "hare.fill")
+                            .imageScale(.large)
+                            .foregroundStyle(.white)
+
+                    } // FIN ZSTACK
                     
-                }
+                } // FIN LABEL
 
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                Image(systemName: "hare")
-                    .imageScale(.large)
-                    .foregroundColor(.blue)
-                
-                
-                
-                
-                
-                Image(systemName: "music.note.house.fill")
-                    .imageScale(.large)
-                    .foregroundColor(.blue)
-                
-
-                
+                Button {
+                    background = .blue
+                } label: {
+                    ZStack{
+                        Rectangle()
+                            .frame(width: 90, height: 70)
+                            .foregroundColor(.blue)
+                            .cornerRadius(10)
+                        Image(systemName: "music.note.house.fill")
+                            .imageScale(.large)
+                            .foregroundStyle(.white)
+                    } // FIN ZSTACK
+                } // FIN LABEL
             } // FIN Hstack
-            
-            
-            
-            
-            
-            
-            
         } // FIN ZSTACK
-        
-        
-        
-        
-        
-        
     } // FIN BODY
 } // FIN ST+ruc
-
 #Preview {
     ContentView()
 }
